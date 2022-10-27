@@ -7,7 +7,16 @@ with open("README.md", "r", encoding="utf-8") as f:
 REPO_NAME = "nlp_dvc_demo"
 AUTHOR_USER_NAME = "Lakshman"
 SRC_REPO = "src"
-LIST_OF_REQUIREMENTS = ['reqiremnents.txt']
+LIST_OF_REQUIREMENTS = [
+    'tqdm',
+    'dvc',
+    'pandas',
+    'numpy',
+    'pyyaml',
+    'Scipy',
+    'scikit-learn',
+    'lxml'
+]
 
 
 setup(
@@ -21,6 +30,6 @@ setup(
     author_email="hanumandla14334@gmail.com",
     packages=[SRC_REPO],
     license="MIT",
-    python_requires=">=3.6",
+    python_requires=">=3.7",
     install_requires=LIST_OF_REQUIREMENTS
 )
