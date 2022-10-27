@@ -1,7 +1,7 @@
 # DVC - NLP - simple - usecase
 DVC project template
 
-## Reference repositort:
+## Reference repository:
 [official reference repo](https://github.com/iterative/example-get-started)
 
 ## STEPS -
