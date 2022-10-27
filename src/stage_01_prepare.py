@@ -33,7 +33,15 @@ def main(config_path, params_path):
     artifacts = config['artifacts']
     prepared_data_dir_path = os.path.join(artifacts['ARTIFACTS_DIR'], artifacts['PREPARED_DATA'])
     create_directories([prepared_data_dir_path])
-    
+
+    train_data_path = os.path.join(prepared_data_dir_path, artifacts['TRAIN_DATA'])
+    test_data_path = os.path.join(prepared_data_dir_path, artifacts['TEST_DATA'])
+
+    encode = 'utf8'
+    with open(input_data, encoding=encode) as fd_in:
+        with open(train_data_path, 'w', encoding=encode) as fd_out_train:
+            with open(test_data_path, 'w', encoding=encode) as fd_out_test:
+                pass
 
 if __name__ == '__main__':
     args = argparse.ArgumentParser()
@@ -42,10 +50,9 @@ if __name__ == '__main__':
     parsed_args = args.parse_args()
 
     try:
-        logging.info("\n********************")
-        logging.info(f">>>>> stage {STAGE} started <<<<<")
+        logging.info(f"********* stage {STAGE} started *********")
         main(config_path=parsed_args.config, params_path=parsed_args.params)
-        logging.info(f">>>>> stage {STAGE} completed!<<<<<\n")
+        logging.info(f"********* stage {STAGE} completed!*********\n")
     except Exception as e:
         logging.exception(e)
         raise e
