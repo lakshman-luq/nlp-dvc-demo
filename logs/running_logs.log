@@ -1,0 +1,18 @@
+[2022-10-28 05:44:30,477: INFO: stage_01_prepare]: ********* stage One started *********
+[2022-10-28 05:44:30,479: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-10-28 05:44:30,479: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-10-28 05:44:30,479: INFO: common]: created directory at: artifacts\prepared
+[2022-10-28 05:44:32,780: INFO: stage_01_prepare]: ********* stage One completed!*********
+
+[2022-10-28 05:47:09,363: INFO: stage_01_prepare]: ********* stage One started *********
+[2022-10-28 05:47:09,365: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-10-28 05:47:09,365: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-10-28 05:47:09,365: INFO: common]: created directory at: artifacts\prepared
+[2022-10-28 05:47:11,225: INFO: stage_01_prepare]: ********* stage One completed!*********
+
+[2022-10-28 06:13:37,684: INFO: stage_01_prepare]: ********* stage One started *********
+[2022-10-28 06:13:37,686: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-10-28 06:13:37,686: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-10-28 06:13:37,686: INFO: common]: created directory at: artifacts\prepared
+[2022-10-28 06:13:39,569: INFO: stage_01_prepare]: ********* stage One completed!*********
+

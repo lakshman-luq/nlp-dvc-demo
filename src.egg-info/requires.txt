@@ -1,0 +1,8 @@
+tqdm
+dvc
+pandas
+numpy
+pyyaml
+Scipy
+scikit-learn
+lxml

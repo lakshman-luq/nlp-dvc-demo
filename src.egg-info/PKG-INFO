@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: src
+Version: 0.0.1
+Summary: A small package for DVC
+Home-page: https://github.com/lakshman-luq/nlp_dvc_demo.git
+Author: Lakshman
+Author-email: hanumandla14334@gmail.com
+License: MIT
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# DVC - NLP - simple - usecase
+DVC project template
+
+## STEPS -
+
+### STEP 01- Create a repository by using template repository
+
+### STEP 02- Clone the new repository
+
+### STEP 03- Create a conda environment after opening the repository in VSCODE
+
+```bash
+conda create --prefix ./env python=3.7 -y
+```
+
+```bash
+conda activate ./env
+```
+OR
+```bash
+source activate ./env
+```
+
+### STEP 04- install the requirements
+```bash
+pip install -r requirements.txt
+```
+
+### STEP 05- initialize the dvc project
+```bash
+dvc init
+```
+
+### STEP 06- commit and push the changes to the remote repository
