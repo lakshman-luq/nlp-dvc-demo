@@ -16,3 +16,80 @@
 [2022-10-28 06:13:37,686: INFO: common]: created directory at: artifacts\prepared
 [2022-10-28 06:13:39,569: INFO: stage_01_prepare]: ********* stage One completed!*********
 
+[2022-10-28 08:01:20,304: INFO: stage_02_featurization]: ********* stage two started *********
+[2022-10-28 08:01:20,304: ERROR: stage_02_featurization]: name 'read_yaml' is not defined
+Traceback (most recent call last):
+  File "src/stage_02_featurization.py", line 50, in <module>
+    main(config_path=parsed_args.config, params_path=parsed_args.params)
+  File "src/stage_02_featurization.py", line 22, in main
+    config = read_yaml(config_path)
+NameError: name 'read_yaml' is not defined
+[2022-10-28 08:02:03,620: INFO: stage_02_featurization]: ********* stage two started *********
+[2022-10-28 08:02:03,622: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-10-28 08:02:03,622: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-10-28 08:02:03,622: INFO: common]: created directory at: artifacts\prepared
+[2022-10-28 08:02:03,622: ERROR: stage_02_featurization]: 'max_features'
+Traceback (most recent call last):
+  File "src/stage_02_featurization.py", line 50, in <module>
+    main(config_path=parsed_args.config, params_path=parsed_args.params)
+  File "src/stage_02_featurization.py", line 37, in main
+    max_features = params['featurize']['max_features']
+KeyError: 'max_features'
+[2022-10-28 08:02:46,228: INFO: stage_02_featurization]: ********* stage two started *********
+[2022-10-28 08:02:46,229: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-10-28 08:02:46,229: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-10-28 08:02:46,229: INFO: common]: created directory at: artifacts\prepared
+[2022-10-28 08:02:47,005: INFO: stage_02_featurization]: ********* stage two completed!*********
+
+[2022-10-28 08:07:31,748: INFO: stage_02_featurization]: ********* stage two started *********
+[2022-10-28 08:07:31,749: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-10-28 08:07:31,751: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-10-28 08:07:31,751: INFO: common]: created directory at: artifacts\prepared
+[2022-10-28 08:07:31,929: INFO: common]: The input data frame artifacts\prepared\train.tsv size is (19921, 3)
+[2022-10-28 08:07:31,929: INFO: stage_02_featurization]: ********* stage two completed!*********
+
+[2022-10-28 08:08:27,006: INFO: stage_02_featurization]: ********* stage two started *********
+[2022-10-28 08:08:27,007: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-10-28 08:08:27,007: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-10-28 08:08:27,007: INFO: common]: created directory at: artifacts\prepared
+[2022-10-28 08:08:27,181: INFO: common]: The input data frame is created at artifacts\prepared\train.tsv and size of (19921, 3)
+[2022-10-28 08:08:27,193: INFO: stage_02_featurization]: ********* stage two completed!*********
+
+[2022-10-28 08:10:04,135: INFO: stage_02_featurization]: ********* stage two started *********
+[2022-10-28 08:10:04,136: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-10-28 08:10:04,136: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-10-28 08:10:04,136: INFO: common]: created directory at: artifacts\prepared
+[2022-10-28 08:10:04,306: INFO: common]: The input data frame is created at artifacts\prepared\train.tsv and size of (19921, 3)
+[2022-10-28 08:10:04,322: INFO: stage_02_featurization]: ********* stage two completed!*********
+
+[2022-10-28 08:16:53,739: INFO: stage_02_featurization]: ********* stage two started *********
+[2022-10-28 08:16:53,740: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-10-28 08:16:53,741: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-10-28 08:16:53,741: INFO: common]: created directory at: artifacts\prepared
+[2022-10-28 08:16:53,908: INFO: common]: The input data frame is created at artifacts\prepared\train.tsv and size of (19921, 3)
+[2022-10-28 08:16:53,923: ERROR: stage_02_featurization]: name 'np' is not defined
+Traceback (most recent call last):
+  File "src/stage_02_featurization.py", line 55, in <module>
+    main(config_path=parsed_args.config, params_path=parsed_args.params)
+  File "src/stage_02_featurization.py", line 42, in main
+    train_words = np.array(df_train.text.str.lower().values.astype('U'))
+NameError: name 'np' is not defined
+[2022-10-28 08:17:18,610: INFO: stage_02_featurization]: ********* stage two started *********
+[2022-10-28 08:17:18,612: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-10-28 08:17:18,612: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-10-28 08:17:18,612: INFO: common]: created directory at: artifacts\prepared
+[2022-10-28 08:17:18,784: INFO: common]: The input data frame is created at artifacts\prepared\train.tsv and size of (19921, 3)
+[2022-10-28 08:17:18,793: ERROR: stage_02_featurization]: 'NoneType' object has no attribute 'text'
+Traceback (most recent call last):
+  File "src/stage_02_featurization.py", line 56, in <module>
+    main(config_path=parsed_args.config, params_path=parsed_args.params)
+  File "src/stage_02_featurization.py", line 43, in main
+    train_words = np.array(df_train.text.str.lower().values.astype('U'))
+AttributeError: 'NoneType' object has no attribute 'text'
+[2022-10-28 08:18:19,518: INFO: stage_02_featurization]: ********* stage two started *********
+[2022-10-28 08:18:19,519: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-10-28 08:18:19,519: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-10-28 08:18:19,519: INFO: common]: created directory at: artifacts\prepared
+[2022-10-28 08:18:19,685: INFO: common]: The input data frame is created at artifacts\prepared\train.tsv and size of (19921, 3)
+[2022-10-28 08:18:20,843: INFO: stage_02_featurization]: ********* stage two completed!*********
+
