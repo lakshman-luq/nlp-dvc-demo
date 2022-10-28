@@ -172,3 +172,31 @@ FileNotFoundError: [Errno 2] No such file or directory: 'artifacts\\features\\tr
 [2022-10-28 19:33:41,066: INFO: featurize]: The output matrix artifacts\features\test.pkl with size (5079, 3002) and data type: float64
 [2022-10-28 19:33:41,250: INFO: stage_02_featurization]: ********* stage two completed!*********
 
+[2022-10-28 19:44:08,600: INFO: stage_01_prepare]: ********* stage One started *********
+[2022-10-28 19:44:08,601: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-10-28 19:44:08,602: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-10-28 19:44:08,602: INFO: common]: created directory at: artifacts\prepared
+[2022-10-28 19:44:10,843: INFO: stage_01_prepare]: ********* stage One completed!*********
+
+[2022-10-28 19:45:17,008: INFO: stage_01_prepare]: ********* stage One started *********
+[2022-10-28 19:45:17,010: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-10-28 19:45:17,010: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-10-28 19:45:17,010: INFO: common]: created directory at: artifacts\prepared
+[2022-10-28 19:45:18,922: INFO: stage_01_prepare]: ********* stage One completed!*********
+
+[2022-10-28 19:45:44,391: INFO: stage_01_prepare]: ********* stage One started *********
+[2022-10-28 19:45:44,392: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-10-28 19:45:44,392: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-10-28 19:45:44,392: INFO: common]: created directory at: artifacts\prepared
+[2022-10-28 19:45:46,307: INFO: stage_01_prepare]: ********* stage One completed!*********
+
+[2022-10-28 19:45:49,027: INFO: stage_02_featurization]: ********* stage two started *********
+[2022-10-28 19:45:49,029: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-10-28 19:45:49,030: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-10-28 19:45:49,030: INFO: common]: created directory at: artifacts\features
+[2022-10-28 19:45:50,124: INFO: common]: The input data frame is created at artifacts\prepared\train.tsv and size of (19921, 3)
+[2022-10-28 19:45:59,787: INFO: featurize]: The output matrix artifacts\features\train.pkl with size (19921, 3002) and data type: float64
+[2022-10-28 19:46:00,091: INFO: common]: The input data frame is created at artifacts\prepared\test.tsv and size of (5079, 3)
+[2022-10-28 19:46:01,083: INFO: featurize]: The output matrix artifacts\features\test.pkl with size (5079, 3002) and data type: float64
+[2022-10-28 19:46:01,256: INFO: stage_02_featurization]: ********* stage two completed!*********
+
