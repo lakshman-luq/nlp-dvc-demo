@@ -138,7 +138,8 @@ dmypy.json
 # add secret keys or API keys here
 configs/secrets.yaml
 
-# add your env folder here if its there
-
+# add your folder here if its there
+data/
+artifacts/prepared/
 
 

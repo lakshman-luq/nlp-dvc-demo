@@ -8,4 +8,4 @@ artifacts:
 
 source_data:
   data_dir: data
-  data_file: datalink.txt
+  data_file: data.xml
