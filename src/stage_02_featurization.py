@@ -3,8 +3,9 @@ import os
 import shutil
 from tqdm import tqdm
 import logging
+import numpy as np 
 
-from src.utils.common import create_directories
+from src.utils.common import create_directories, get_df, read_yaml
 
 
 STAGE = "two" ## <<< change stage name 
@@ -33,6 +34,16 @@ def main(config_path, params_path):
 
     featurized_train_data_path = os.path.join(prepared_data_dir_path, artifacts['FEATURIZED_OUT_TRAIN'])
     featurized_test_data_path = os.path.join(prepared_data_dir_path, artifacts['FEATURIZED_OUT_TEST'])
+
+    max_features = params['featurize']['max_features']
+    ngrams = params['featurize']['ngrams']
+
+    df_train = get_df(train_data_path)
+
+    train_words = np.array(df_train.text.str.lower().values.astype('U'))
+    print(train_words[:20])
+
+
 
 if __name__ == '__main__':
     args = argparse.ArgumentParser()

@@ -1,3 +1,4 @@
+from importlib.resources import path
 import os
 import yaml
 import logging
@@ -22,3 +23,16 @@ def save_json(path: str, data: dict) -> None:
         json.dump(data, f, indent=4)
 
     logging.info(f"json file saved at: {path}")
+
+def get_df(path_to_data: str, sep: str = '\t') -> pd.DataFrame:
+    df = pd.read_csv(
+        path_to_data,
+        encoding='utf-8',
+        header=None,
+        delimiter=sep,
+        names=['id', 'label', 'text'])
+
+    logging.info(f'The input data frame is created at {path_to_data} and size of {df.shape}')
+    return df
+
+
