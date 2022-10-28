@@ -109,3 +109,66 @@ AttributeError: 'NoneType' object has no attribute 'text'
 [2022-10-28 19:10:59,201: INFO: featurize]: The output matrix artifacts\prepared\train.pkl with size (19921, 3002) and data type: float64
 [2022-10-28 19:10:59,453: INFO: stage_02_featurization]: ********* stage two completed!*********
 
+[2022-10-28 19:16:49,698: INFO: stage_02_featurization]: ********* stage two started *********
+[2022-10-28 19:16:49,698: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-10-28 19:16:49,698: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-10-28 19:16:49,698: INFO: common]: created directory at: artifacts\prepared
+[2022-10-28 19:16:49,698: ERROR: stage_02_featurization]: [Errno 2] No such file or directory: 'artifacts\\features\\train.tsv'
+Traceback (most recent call last):
+  File "src/stage_02_featurization.py", line 66, in <module>
+    main(config_path=parsed_args.config, params_path=parsed_args.params)
+  File "src/stage_02_featurization.py", line 41, in main
+    df_train = get_df(train_data_path)
+  File "d:\python examples\0.2 dvc\nlp_dvc_demo\src\utils\common.py", line 33, in get_df
+    names=['id', 'label', 'text'])
+  File "C:\Users\luqman\anaconda3\envs\nlp_dvc\lib\site-packages\pandas\util\_decorators.py", line 311, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\luqman\anaconda3\envs\nlp_dvc\lib\site-packages\pandas\io\parsers\readers.py", line 586, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "C:\Users\luqman\anaconda3\envs\nlp_dvc\lib\site-packages\pandas\io\parsers\readers.py", line 482, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "C:\Users\luqman\anaconda3\envs\nlp_dvc\lib\site-packages\pandas\io\parsers\readers.py", line 811, in __init__
+    self._engine = self._make_engine(self.engine)
+  File "C:\Users\luqman\anaconda3\envs\nlp_dvc\lib\site-packages\pandas\io\parsers\readers.py", line 1040, in _make_engine
+    return mapping[engine](self.f, **self.options)  # type: ignore[call-arg]
+  File "C:\Users\luqman\anaconda3\envs\nlp_dvc\lib\site-packages\pandas\io\parsers\c_parser_wrapper.py", line 51, in __init__
+    self._open_handles(src, kwds)
+  File "C:\Users\luqman\anaconda3\envs\nlp_dvc\lib\site-packages\pandas\io\parsers\base_parser.py", line 229, in _open_handles
+    errors=kwds.get("encoding_errors", "strict"),
+  File "C:\Users\luqman\anaconda3\envs\nlp_dvc\lib\site-packages\pandas\io\common.py", line 707, in get_handle
+    newline="",
+FileNotFoundError: [Errno 2] No such file or directory: 'artifacts\\features\\train.tsv'
+[2022-10-28 19:17:45,752: INFO: stage_02_featurization]: ********* stage two started *********
+[2022-10-28 19:17:45,753: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-10-28 19:17:45,753: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-10-28 19:17:45,753: INFO: common]: created directory at: artifacts\features
+[2022-10-28 19:17:45,924: INFO: common]: The input data frame is created at artifacts\prepared\train.tsv and size of (19921, 3)
+[2022-10-28 19:17:56,967: INFO: featurize]: The output matrix artifacts\prepared\train.pkl with size (19921, 3002) and data type: float64
+[2022-10-28 19:17:57,145: INFO: stage_02_featurization]: ********* stage two completed!*********
+
+[2022-10-28 19:19:17,406: INFO: stage_02_featurization]: ********* stage two started *********
+[2022-10-28 19:19:17,406: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-10-28 19:19:17,406: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-10-28 19:19:17,406: INFO: common]: created directory at: artifacts\features
+[2022-10-28 19:19:17,580: INFO: common]: The input data frame is created at artifacts\prepared\train.tsv and size of (19921, 3)
+[2022-10-28 19:19:26,907: INFO: featurize]: The output matrix artifacts\prepared\train.pkl with size (19921, 3002) and data type: float64
+[2022-10-28 19:19:27,051: INFO: stage_02_featurization]: ********* stage two completed!*********
+
+[2022-10-28 19:23:19,668: INFO: stage_02_featurization]: ********* stage two started *********
+[2022-10-28 19:23:19,669: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-10-28 19:23:19,669: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-10-28 19:23:19,669: INFO: common]: created directory at: artifacts\features
+[2022-10-28 19:23:19,840: INFO: common]: The input data frame is created at artifacts\prepared\train.tsv and size of (19921, 3)
+[2022-10-28 19:23:30,773: INFO: featurize]: The output matrix artifacts\features\train.pkl with size (19921, 3002) and data type: float64
+[2022-10-28 19:23:30,958: INFO: stage_02_featurization]: ********* stage two completed!*********
+
+[2022-10-28 19:33:28,732: INFO: stage_02_featurization]: ********* stage two started *********
+[2022-10-28 19:33:28,733: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-10-28 19:33:28,734: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-10-28 19:33:28,734: INFO: common]: created directory at: artifacts\features
+[2022-10-28 19:33:28,924: INFO: common]: The input data frame is created at artifacts\prepared\train.tsv and size of (19921, 3)
+[2022-10-28 19:33:39,594: INFO: featurize]: The output matrix artifacts\features\train.pkl with size (19921, 3002) and data type: float64
+[2022-10-28 19:33:39,991: INFO: common]: The input data frame is created at artifacts\prepared\test.tsv and size of (5079, 3)
+[2022-10-28 19:33:41,066: INFO: featurize]: The output matrix artifacts\features\test.pkl with size (5079, 3002) and data type: float64
+[2022-10-28 19:33:41,250: INFO: stage_02_featurization]: ********* stage two completed!*********
+
