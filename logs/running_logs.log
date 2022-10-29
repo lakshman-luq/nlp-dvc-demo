@@ -209,3 +209,37 @@ FileNotFoundError: [Errno 2] No such file or directory: 'artifacts\\features\\tr
 [2022-10-28 20:06:51,402: INFO: stage_03_train]: Y matrix size: (19921,)
 [2022-10-28 20:06:55,065: INFO: stage_03_train]: ********* stage three completed!*********
 
+[2022-10-28 20:16:25,569: INFO: stage_01_prepare]: ********* stage One started *********
+[2022-10-28 20:16:25,571: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-10-28 20:16:25,572: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-10-28 20:16:25,572: INFO: common]: created directory at: artifacts\prepared
+[2022-10-28 20:16:27,328: INFO: stage_01_prepare]: ********* stage One completed!*********
+
+[2022-10-28 20:16:29,575: INFO: stage_02_featurization]: ********* stage two started *********
+[2022-10-28 20:16:29,576: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-10-28 20:16:29,577: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-10-28 20:16:29,577: INFO: common]: created directory at: artifacts\features
+[2022-10-28 20:16:30,667: INFO: common]: The input data frame is created at artifacts\prepared\train.tsv and size of (19921, 3)
+[2022-10-28 20:16:40,406: INFO: featurize]: The output matrix artifacts\features\train.pkl with size (19921, 3002) and data type: float64
+[2022-10-28 20:16:40,702: INFO: common]: The input data frame is created at artifacts\prepared\test.tsv and size of (5079, 3)
+[2022-10-28 20:16:41,658: INFO: featurize]: The output matrix artifacts\features\test.pkl with size (5079, 3002) and data type: float64
+[2022-10-28 20:16:41,846: INFO: stage_02_featurization]: ********* stage two completed!*********
+
+[2022-10-28 20:16:43,359: INFO: stage_03_train]: ********* stage three started *********
+[2022-10-28 20:16:43,359: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-10-28 20:16:43,361: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-10-28 20:16:43,361: INFO: common]: created directory at: artifacts\model
+[2022-10-28 20:16:43,376: INFO: stage_03_train]: input matrix size: (19921, 3002)
+[2022-10-28 20:16:43,376: INFO: stage_03_train]: X matrix size: (19921, 3000)
+[2022-10-28 20:16:43,376: INFO: stage_03_train]: Y matrix size: (19921,)
+[2022-10-28 20:16:46,179: INFO: stage_03_train]: ********* stage three completed!*********
+
+[2022-10-28 20:17:18,650: INFO: stage_03_train]: ********* stage three started *********
+[2022-10-28 20:17:18,651: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-10-28 20:17:18,652: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-10-28 20:17:18,652: INFO: common]: created directory at: artifacts\model
+[2022-10-28 20:17:18,663: INFO: stage_03_train]: input matrix size: (19921, 3002)
+[2022-10-28 20:17:18,664: INFO: stage_03_train]: X matrix size: (19921, 3000)
+[2022-10-28 20:17:18,664: INFO: stage_03_train]: Y matrix size: (19921,)
+[2022-10-28 20:17:21,439: INFO: stage_03_train]: ********* stage three completed!*********
+
