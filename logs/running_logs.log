@@ -340,3 +340,29 @@ ValueError: Found input variables with inconsistent numbers of samples: [5079, 1
 [2022-10-28 22:52:20,674: INFO: common]: json file saved at: roc.json
 [2022-10-28 22:52:20,689: INFO: stage_04_evaluate]: ********* stage four completed!*********
 
+[2022-10-28 22:58:04,998: INFO: stage_02_featurization]: ********* stage two started *********
+[2022-10-28 22:58:04,998: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-10-28 22:58:04,998: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-10-28 22:58:04,998: INFO: common]: created directory at: artifacts\features
+[2022-10-28 22:58:05,234: INFO: common]: The input data frame is created at artifacts\prepared\train.tsv and size of (19921, 3)
+[2022-10-28 22:58:25,054: INFO: featurize]: The output matrix artifacts\features\train.pkl with size (19921, 2002) and data type: float64
+[2022-10-28 22:58:25,122: INFO: common]: The input data frame is created at artifacts\prepared\test.tsv and size of (5079, 3)
+[2022-10-28 22:58:26,635: INFO: featurize]: The output matrix artifacts\features\test.pkl with size (5079, 2002) and data type: float64
+[2022-10-28 22:58:27,003: INFO: stage_02_featurization]: ********* stage two completed!*********
+
+[2022-10-28 22:58:28,899: INFO: stage_03_train]: ********* stage three started *********
+[2022-10-28 22:58:28,899: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-10-28 22:58:28,899: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-10-28 22:58:28,899: INFO: common]: created directory at: artifacts\model
+[2022-10-28 22:58:28,919: INFO: stage_03_train]: input matrix size: (19921, 2002)
+[2022-10-28 22:58:28,919: INFO: stage_03_train]: X matrix size: (19921, 2000)
+[2022-10-28 22:58:28,919: INFO: stage_03_train]: Y matrix size: (19921,)
+[2022-10-28 22:58:31,078: INFO: stage_03_train]: ********* stage three completed!*********
+
+[2022-10-28 22:58:32,773: INFO: stage_04_evaluate]: ********* stage four started *********
+[2022-10-28 22:58:32,775: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-10-28 22:58:33,032: INFO: common]: json file saved at: scores.json
+[2022-10-28 22:58:33,039: INFO: common]: json file saved at: prc.json
+[2022-10-28 22:58:33,055: INFO: common]: json file saved at: roc.json
+[2022-10-28 22:58:33,065: INFO: stage_04_evaluate]: ********* stage four completed!*********
+
