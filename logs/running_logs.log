@@ -200,3 +200,12 @@ FileNotFoundError: [Errno 2] No such file or directory: 'artifacts\\features\\tr
 [2022-10-28 19:46:01,083: INFO: featurize]: The output matrix artifacts\features\test.pkl with size (5079, 3002) and data type: float64
 [2022-10-28 19:46:01,256: INFO: stage_02_featurization]: ********* stage two completed!*********
 
+[2022-10-28 20:06:51,376: INFO: stage_03_train]: ********* stage three started *********
+[2022-10-28 20:06:51,376: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-10-28 20:06:51,380: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-10-28 20:06:51,380: INFO: common]: created directory at: artifacts\model
+[2022-10-28 20:06:51,402: INFO: stage_03_train]: input matrix size: (19921, 3002)
+[2022-10-28 20:06:51,402: INFO: stage_03_train]: X matrix size: (19921, 3000)
+[2022-10-28 20:06:51,402: INFO: stage_03_train]: Y matrix size: (19921,)
+[2022-10-28 20:06:55,065: INFO: stage_03_train]: ********* stage three completed!*********
+
