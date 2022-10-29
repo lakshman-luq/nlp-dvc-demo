@@ -301,3 +301,10 @@ ValueError: Found input variables with inconsistent numbers of samples: [5079, 1
 [2022-10-28 22:39:37,511: INFO: common]: json file saved at: prc.json
 [2022-10-28 22:39:37,528: INFO: stage_04_evaluate]: ********* stage four completed!*********
 
+[2022-10-28 22:44:19,979: INFO: stage_04_evaluate]: ********* stage four started *********
+[2022-10-28 22:44:19,981: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-10-28 22:44:20,257: INFO: common]: json file saved at: scores.json
+[2022-10-28 22:44:20,276: INFO: common]: json file saved at: prc.json
+[2022-10-28 22:44:20,279: INFO: common]: json file saved at: roc.json
+[2022-10-28 22:44:20,292: INFO: stage_04_evaluate]: ********* stage four completed!*********
+
