@@ -308,3 +308,35 @@ ValueError: Found input variables with inconsistent numbers of samples: [5079, 1
 [2022-10-28 22:44:20,279: INFO: common]: json file saved at: roc.json
 [2022-10-28 22:44:20,292: INFO: stage_04_evaluate]: ********* stage four completed!*********
 
+[2022-10-28 22:51:51,899: INFO: stage_01_prepare]: ********* stage One started *********
+[2022-10-28 22:51:51,901: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-10-28 22:51:51,901: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-10-28 22:51:51,901: INFO: common]: created directory at: artifacts\prepared
+[2022-10-28 22:51:54,250: INFO: stage_01_prepare]: ********* stage One completed!*********
+
+[2022-10-28 22:51:57,216: INFO: stage_02_featurization]: ********* stage two started *********
+[2022-10-28 22:51:57,219: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-10-28 22:51:57,219: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-10-28 22:51:57,219: INFO: common]: created directory at: artifacts\features
+[2022-10-28 22:51:58,391: INFO: common]: The input data frame is created at artifacts\prepared\train.tsv and size of (19921, 3)
+[2022-10-28 22:52:10,719: INFO: featurize]: The output matrix artifacts\features\train.pkl with size (19921, 3002) and data type: float64
+[2022-10-28 22:52:11,154: INFO: common]: The input data frame is created at artifacts\prepared\test.tsv and size of (5079, 3)
+[2022-10-28 22:52:12,391: INFO: featurize]: The output matrix artifacts\features\test.pkl with size (5079, 3002) and data type: float64
+[2022-10-28 22:52:12,596: INFO: stage_02_featurization]: ********* stage two completed!*********
+
+[2022-10-28 22:52:14,548: INFO: stage_03_train]: ********* stage three started *********
+[2022-10-28 22:52:14,549: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-10-28 22:52:14,549: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-10-28 22:52:14,549: INFO: common]: created directory at: artifacts\model
+[2022-10-28 22:52:14,566: INFO: stage_03_train]: input matrix size: (19921, 3002)
+[2022-10-28 22:52:14,566: INFO: stage_03_train]: X matrix size: (19921, 3000)
+[2022-10-28 22:52:14,566: INFO: stage_03_train]: Y matrix size: (19921,)
+[2022-10-28 22:52:18,641: INFO: stage_03_train]: ********* stage three completed!*********
+
+[2022-10-28 22:52:20,366: INFO: stage_04_evaluate]: ********* stage four started *********
+[2022-10-28 22:52:20,368: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-10-28 22:52:20,650: INFO: common]: json file saved at: scores.json
+[2022-10-28 22:52:20,672: INFO: common]: json file saved at: prc.json
+[2022-10-28 22:52:20,674: INFO: common]: json file saved at: roc.json
+[2022-10-28 22:52:20,689: INFO: stage_04_evaluate]: ********* stage four completed!*********
+

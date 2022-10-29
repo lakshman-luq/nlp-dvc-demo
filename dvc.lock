@@ -4,8 +4,8 @@ stages:
     cmd: python src/stage_01_prepare.py --config=configs/config.yaml --params=params.yaml
     deps:
     - path: configs/config.yaml
-      md5: ce3e2ba05cca6fcd4023194501f9fac8
-      size: 373
+      md5: 31e8e1ab979480849e6165f06aae9b05
+      size: 450
     - path: data/data.xml
       md5: a304afb96060aad90176268345e10355
       size: 37891850
@@ -39,8 +39,8 @@ stages:
       md5: 553034c4cf40efc63c99c19fe98610d0
       size: 18986541
     - path: configs/config.yaml
-      md5: ce3e2ba05cca6fcd4023194501f9fac8
-      size: 373
+      md5: 31e8e1ab979480849e6165f06aae9b05
+      size: 450
     - path: src/stage_02_featurization.py
       md5: c754cb8e5ccdb29be3c293dd87afbd3d
       size: 2949
@@ -70,8 +70,8 @@ stages:
       md5: 553034c4cf40efc63c99c19fe98610d0
       size: 18986541
     - path: configs/config.yaml
-      md5: ce3e2ba05cca6fcd4023194501f9fac8
-      size: 373
+      md5: 31e8e1ab979480849e6165f06aae9b05
+      size: 450
     - path: src/stage_03_train.py
       md5: 79f576bd06c6f46ab6ebcd9f26616cbe
       size: 2249
@@ -87,3 +87,33 @@ stages:
     - path: artifacts/model/model.pkl
       md5: 20ac77b4d7237b3cf0c6e676bdc7dbbc
       size: 3558016
+  evaluate:
+    cmd: python src/stage_04_evaluate.py --config=configs/config.yaml
+    deps:
+    - path: artifacts/features/test.pkl
+      md5: a16444f35be763056c35610d6741fa00
+      size: 2597499
+    - path: artifacts/model/model.pkl
+      md5: 20ac77b4d7237b3cf0c6e676bdc7dbbc
+      size: 3558016
+    - path: configs/config.yaml
+      md5: 31e8e1ab979480849e6165f06aae9b05
+      size: 450
+    - path: src/stage_04_evaluate.py
+      md5: b55b3182d66918390c0f47c4020c6bb8
+      size: 2841
+    - path: src/utils/common.py
+      md5: 833cc7ee07874bd326807812f3f40638
+      size: 1057
+    outs:
+    - path: prc.json
+      md5: 28dedc46a5008794a2514dc4f1e4b3ea
+      size: 130624
+    - path: roc.json
+      md5: 4be2314d4ebd0869b9c6de4fc9bdcfe3
+      size: 95591
+    - path: scores.json
+      md5: 075b99c7b6e7123f84c0292a80876f0f
+      size: 75
+  run_plots_command:
+    cmd: dvc plots diff
