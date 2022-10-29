@@ -289,3 +289,15 @@ Traceback (most recent call last):
   File "C:\Users\luqman\anaconda3\envs\nlp_dvc\lib\site-packages\sklearn\utils\validation.py", line 334, in check_consistent_length
     % [int(l) for l in lengths]
 ValueError: Found input variables with inconsistent numbers of samples: [5079, 1]
+[2022-10-28 22:39:11,129: INFO: stage_04_evaluate]: ********* stage four started *********
+[2022-10-28 22:39:11,131: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-10-28 22:39:11,421: INFO: common]: json file saved at: scores.json
+[2022-10-28 22:39:11,424: INFO: common]: json file saved at: prc.json
+[2022-10-28 22:39:11,440: INFO: stage_04_evaluate]: ********* stage four completed!*********
+
+[2022-10-28 22:39:37,237: INFO: stage_04_evaluate]: ********* stage four started *********
+[2022-10-28 22:39:37,238: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-10-28 22:39:37,507: INFO: common]: json file saved at: scores.json
+[2022-10-28 22:39:37,511: INFO: common]: json file saved at: prc.json
+[2022-10-28 22:39:37,528: INFO: stage_04_evaluate]: ********* stage four completed!*********
+
