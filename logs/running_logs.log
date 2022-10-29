@@ -243,3 +243,49 @@ FileNotFoundError: [Errno 2] No such file or directory: 'artifacts\\features\\tr
 [2022-10-28 20:17:18,664: INFO: stage_03_train]: Y matrix size: (19921,)
 [2022-10-28 20:17:21,439: INFO: stage_03_train]: ********* stage three completed!*********
 
+[2022-10-28 20:43:51,626: INFO: stage_04_evaluate]: ********* stage four started *********
+[2022-10-28 20:43:51,627: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-10-28 20:43:52,336: INFO: stage_04_evaluate]: ********* stage four completed!*********
+
+[2022-10-28 22:34:25,130: INFO: stage_04_evaluate]: ********* stage four started *********
+[2022-10-28 22:34:25,133: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-10-28 22:34:25,376: ERROR: stage_04_evaluate]: Found input variables with inconsistent numbers of samples: [5079, 1]
+Traceback (most recent call last):
+  File "src/stage_04_evaluate.py", line 76, in <module>
+    main(config_path=parsed_args.config, params_path=parsed_args.params)
+  File "src/stage_04_evaluate.py", line 44, in main
+    avg_prec = metrics.average_precision_score(labels, predictions)
+  File "C:\Users\luqman\anaconda3\envs\nlp_dvc\lib\site-packages\sklearn\metrics\_ranking.py", line 233, in average_precision_score
+    average_precision, y_true, y_score, average, sample_weight=sample_weight
+  File "C:\Users\luqman\anaconda3\envs\nlp_dvc\lib\site-packages\sklearn\metrics\_base.py", line 75, in _average_binary_score
+    return binary_metric(y_true, y_score, sample_weight=sample_weight)
+  File "C:\Users\luqman\anaconda3\envs\nlp_dvc\lib\site-packages\sklearn\metrics\_ranking.py", line 206, in _binary_uninterpolated_average_precision
+    y_true, y_score, pos_label=pos_label, sample_weight=sample_weight
+  File "C:\Users\luqman\anaconda3\envs\nlp_dvc\lib\site-packages\sklearn\metrics\_ranking.py", line 859, in precision_recall_curve
+    y_true, probas_pred, pos_label=pos_label, sample_weight=sample_weight
+  File "C:\Users\luqman\anaconda3\envs\nlp_dvc\lib\site-packages\sklearn\metrics\_ranking.py", line 733, in _binary_clf_curve
+    check_consistent_length(y_true, y_score, sample_weight)
+  File "C:\Users\luqman\anaconda3\envs\nlp_dvc\lib\site-packages\sklearn\utils\validation.py", line 334, in check_consistent_length
+    % [int(l) for l in lengths]
+ValueError: Found input variables with inconsistent numbers of samples: [5079, 1]
+[2022-10-28 22:35:47,586: INFO: stage_04_evaluate]: ********* stage four started *********
+[2022-10-28 22:35:47,586: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-10-28 22:35:47,842: ERROR: stage_04_evaluate]: Found input variables with inconsistent numbers of samples: [5079, 1]
+Traceback (most recent call last):
+  File "src/stage_04_evaluate.py", line 76, in <module>
+    main(config_path=parsed_args.config, params_path=parsed_args.params)
+  File "src/stage_04_evaluate.py", line 44, in main
+    avg_prec = metrics.average_precision_score(labels, predictions)
+  File "C:\Users\luqman\anaconda3\envs\nlp_dvc\lib\site-packages\sklearn\metrics\_ranking.py", line 233, in average_precision_score
+    average_precision, y_true, y_score, average, sample_weight=sample_weight
+  File "C:\Users\luqman\anaconda3\envs\nlp_dvc\lib\site-packages\sklearn\metrics\_base.py", line 75, in _average_binary_score
+    return binary_metric(y_true, y_score, sample_weight=sample_weight)
+  File "C:\Users\luqman\anaconda3\envs\nlp_dvc\lib\site-packages\sklearn\metrics\_ranking.py", line 206, in _binary_uninterpolated_average_precision
+    y_true, y_score, pos_label=pos_label, sample_weight=sample_weight
+  File "C:\Users\luqman\anaconda3\envs\nlp_dvc\lib\site-packages\sklearn\metrics\_ranking.py", line 859, in precision_recall_curve
+    y_true, probas_pred, pos_label=pos_label, sample_weight=sample_weight
+  File "C:\Users\luqman\anaconda3\envs\nlp_dvc\lib\site-packages\sklearn\metrics\_ranking.py", line 733, in _binary_clf_curve
+    check_consistent_length(y_true, y_score, sample_weight)
+  File "C:\Users\luqman\anaconda3\envs\nlp_dvc\lib\site-packages\sklearn\utils\validation.py", line 334, in check_consistent_length
+    % [int(l) for l in lengths]
+ValueError: Found input variables with inconsistent numbers of samples: [5079, 1]
