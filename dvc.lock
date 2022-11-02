@@ -52,17 +52,17 @@ stages:
       size: 519
     params:
       params.yaml:
-        featurize.max_features: 2000
-        featurize.ngrams: 3
+        featurize.max_features: 2500
+        featurize.ngrams: 4
         prepare.seed: 2021
         prepare.split: 0.2
     outs:
     - path: artifacts/features/test.pkl
-      md5: c46e57d9e8eca3d873497ab4b2d93dd2
-      size: 2492283
+      md5: dba6333a0d2395cd361e575a95b1ceb7
+      size: 2672067
     - path: artifacts/features/train.pkl
-      md5: 85fe6093370ddf261682eb0cea7d8488
-      size: 9712731
+      md5: c264f469bf256ecbe03669879fdb0f30
+      size: 10405371
   train:
     cmd: python src/stage_03_train.py --config=configs/config.yaml --params=params.yaml
     deps:
@@ -80,22 +80,22 @@ stages:
       size: 1057
     params:
       params.yaml:
-        train.min_split: 17
-        train.n_est: 50
+        train.min_split: 15
+        train.n_est: 75
         train.seed: 2021
     outs:
     - path: artifacts/model/model.pkl
-      md5: ca344717ebc9d8dd006be5de74d425b5
-      size: 1742720
+      md5: b9ed91fb52cd4170df51c52f42ec72a9
+      size: 2739072
   evaluate:
     cmd: python src/stage_04_evaluate.py --config=configs/config.yaml
     deps:
     - path: artifacts/features/test.pkl
-      md5: c46e57d9e8eca3d873497ab4b2d93dd2
-      size: 2492283
+      md5: dba6333a0d2395cd361e575a95b1ceb7
+      size: 2672067
     - path: artifacts/model/model.pkl
-      md5: ca344717ebc9d8dd006be5de74d425b5
-      size: 1742720
+      md5: b9ed91fb52cd4170df51c52f42ec72a9
+      size: 2739072
     - path: configs/config.yaml
       md5: 31e8e1ab979480849e6165f06aae9b05
       size: 450
@@ -107,13 +107,13 @@ stages:
       size: 1057
     outs:
     - path: prc.json
-      md5: 1983c3ff19c2df9068b98a4f279e1942
-      size: 134967
+      md5: d75a93ce62f2dc1391b0c9642869fea8
+      size: 155456
     - path: roc.json
-      md5: fbac1e4aa17a3b2bd25a069de899133a
-      size: 80911
+      md5: c1faa7363c64c03ea68d9dd517cd5e57
+      size: 83678
     - path: scores.json
-      md5: aff36647c715b430ad509e64ac401dd5
-      size: 75
+      md5: 182782d8ea772be6cd6f162bb3dc76e7
+      size: 76
   run_plots_command:
     cmd: dvc plots diff
